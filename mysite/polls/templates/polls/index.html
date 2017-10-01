@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/stylesheet.css' %}" />
+<img src="{{STATIC_URL}} images/basic-django.png" / >
+
+{% if question_list %}
+    <ul>
+    {% for question in question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

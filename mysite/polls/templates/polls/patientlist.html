@@ -1,0 +1,7 @@
+<ul>
+{% for choice in patient_list.patient_set.all %}
+    <li>{{ choice.first_name }} {{ choice.last_name }}</li>
+    <ul>{{ choice.blood_type }}</ul>
+    <ul>{{ choice.phone_num }}</ul>
+{% endfor %}
+</ul>
