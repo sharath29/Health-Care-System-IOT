@@ -1,3 +1,16 @@
+<table cellspacing="15">
+<tr>
+  <th>temperature	</th>
+  <th>pulserate(bpi)	</th>
+  <th>date(yyyy-mm-dd)	</th>
+  <th>time(hh:mm:ss)	</th>
+</tr>
 {% for i in rows %}
-	<ul>{{ i.0 }} {{ i.1 }} {{ i.2 }} {{ i.3 }} {{ i.4 }} {{ i.5 }} {{ i.6 }} {{ i.7 }} {{ i.8 }} {{ i.9 }} {{ i.10 }} {{ i.11 }}</ul>
+<tr>
+  <th> {{ i.0 }}</th>
+  <th> {{ i.1 }}</th>
+  <th> {{ i.2 }}</th>
+  <th> {{ i.3 }}</th>
+</tr> 
 {% endfor %}
+</table>
