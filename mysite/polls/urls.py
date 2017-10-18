@@ -1,3 +1,4 @@
+
 from django.conf.urls import url
 from . import views
 
@@ -8,6 +9,7 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),
     url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
     url(r'^patient/$', views.patient, name='patient'),
+    url(r'^patient/data$', views.patientdata, name='patientdata'),
     url(r'^patientlog/$', views.patientlog, name='patientlog'),
     url(r'^doctor/$', views.doctor, name='doctor'),
     url(r'^signup/$', views.signup, name='signup'),

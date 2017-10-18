@@ -82,6 +82,12 @@ DATABASES = {
         # 'NAME': 'sharath',
         # 'USER': 'sharath',
         # 'PASSWORD': 'sharath',
+    },
+    'temp': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'testdb',
+        'USER': 'root',
+        'PASSWORD': 'sharath',
     }
 }
 

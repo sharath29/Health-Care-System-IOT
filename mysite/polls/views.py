@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
+import MySQLdb as mdb
 from .models import Choice, Question, Signup, Patient
 
 
@@ -32,6 +33,13 @@ def cleardb(request):
 	Patient.objects.all().delete()
 	return render(request,'polls/index3.html')
 
+def patientdata(request):
+	conn = mdb.connect("localhost","root","sharath","testdb")
+	cursor = conn.cursor()
+	cursor.execute("select * from pulse_temp")
+	rows = cursor.fetchall()
+	return render(request,'polls/temp.html',{'rows':rows})
+
 def patientlog(request):
 	temp = Signup.objects.get(first_name= request.POST['doctor'])
 	instance = Patient.objects.create(doctor_name=temp, first_name=request.POST['first'],last_name=request.POST['last'],email=request.POST['mail'],phone_num=request.POST['num'],blood_type=request.POST['blood'],weight=request.POST['weight'],height=request.POST['height'])
@@ -51,6 +59,11 @@ def index(request):
 def login(request):
 	email = request.POST['mail']
 	password = request.POST['pass']
+	# conn = mdb.connect("localhost","root","sharath","testdb")
+	# cursor = conn.cursor()
+	# cursor.execute("select * from patient")
+	# rows = cursor.fetchall()
+	# return render(request,'polls/temp.html',{'rows':rows})
 	if len(Signup.objects.filter(email=email,password=password)):
 		context = {"patient_list":Signup.objects.get(email=request.POST['mail'])}
 		return render(request,'polls/patientlist.html',context)

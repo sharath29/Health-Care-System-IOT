@@ -4,13 +4,13 @@
    <meta charset='utf-8'>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="{% static 'polls/css/styles_menu.css' %}">
    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   
+      <link rel="stylesheet" href="{% static 'polls/css/styles_menu.css' %}">
       <link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
 
    <title>Hospital</title>
@@ -35,44 +35,44 @@
           <div class="top-row">
             <div class="field-wrap">
               <label>First Name<span class="req">*</span></label>
-              <input type="text" name="first"  autocomplete="off" />
+              <input type="text" required name="first"  autocomplete="off" />
             </div>
         
             <div class="field-wrap">
               <label>Last Name<span class="req">*</span></label>
-              <input type="text" name="last"  autocomplete="off"/>
+              <input type="text" required name="last"  autocomplete="off"/>
             </div>
           </div>
 
           <div class="field-wrap">
             <label>Email Address<span class="req">*</span></label>
-            <input type="email" name="mail"  autocomplete="off"/>
+            <input type="email" required name="mail"  autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>Enter Phone Number<span class="req">*</span></label>
-            <input type="text" name="num" autocomplete="off"/>
+            <input type="text" required name="num" autocomplete="off"/>
           </div>
 
           <div class="field-wrap">
             <label>Doctor Supervisor<span class="req">*</span></label>
-            <input type="text" name="doctor" autocomplete="off"/>
+            <input type="text" required name="doctor" autocomplete="off"/>
           </div>
 
           <div class="top-row">
             <div class="field-wrap">
               <label>Blood Type<span class="req">*</span></label>
-              <input type="text" name="blood"  autocomplete="off" />
+              <input type="text" required name="blood"  autocomplete="off" />
             </div>
         
             <div class="field-wrap">
               <label>Weight<span class="req">*</span></label>
-              <input type="text" name="weight"  autocomplete="off"/>
+              <input type="text" required name="weight"  autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
               <label>Height<span class="req">*</span></label>
-              <input type="text" name="height"  autocomplete="off"/>
+              <input type="text" required name="height"  autocomplete="off"/>
             </div>
           </div>
           
@@ -85,6 +85,6 @@
 
     <script  src="{% static 'polls/js/index.js' %}"></script>
 </body>
-<html>
+
 
   

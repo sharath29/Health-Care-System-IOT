@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.exceptions import ValidationError
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
@@ -32,5 +32,12 @@ class Patient(models.Model):
 	blood_type = models.CharField(max_length=200,default='O+')
 	height = models.CharField(max_length=200,default='175')
 	weight = models.CharField(max_length=200,default='50')
+	def clean(self):
+		if self.doctor_name != "sharath":
+			raise ValidationError(_('Draft entries may not have a publication date.'))
 	def __str__(self):
 		return self.first_name + " " + self.last_name
+
+
+
+
