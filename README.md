@@ -4,6 +4,7 @@
 1.Clone this project into your local machine.
 
 2.Run ifconfig and find out your ipaddress of your local machine.
+![ScreenShot](https://raw.github.com/sharath29/dbms-project/master/)
 
 3.Go to raspberrypi files 
   sudo vim etc/wpa_supplicant/wpa_supplicant.config
