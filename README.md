@@ -1,15 +1,18 @@
 # dbms-project
 
 # SETUP
-1.Run ifconfig and find out your ipaddress of your local machine.
+1.Clone this project into your local machine.
 
-2.Go to raspberrypi files 
-  sudo vim etc/network/wpa_config
+2.Run ifconfig and find out your ipaddress of your local machine.
+
+3.Go to raspberrypi files 
+  sudo vim etc/wpa_supplicant/wpa_supplicant.config
+
   add
   network={
       ssid="network-name"
       psk="network-password"
-      wpa=""
+      key_mgmt=WPA-PSK
   }
   save and close
 
@@ -18,7 +21,7 @@
   
   This will display all the devices connected to this network(subnet).
 
-4.Clone this project into your local machine.
+
 
 5.Activate virtualenv
   cd into the project folder(dbms-project)
