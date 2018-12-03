@@ -1,4 +1,5 @@
 # dbms-project
+Using raspberry pi and ardiuno board to read data from sensors attached to patient and send real time health sensor data to the doctor and notifying incase of any abnormal sensor data.
 
 # SETUP
 1.Clone this project into your local machine.
